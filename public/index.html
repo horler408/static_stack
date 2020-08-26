@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./css/indexStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav class="nav-bar nav-1">
+          <img
+            src="./images/milk-shake.jpg"
+            width="100"
+            height="100"
+            class="logo"
+          />
+          <h1 class="header-logo">HorlerTech</h1>
+          <ul class="nav-links">
+            <li class="active nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="./pages/info.html">About</a></li>
+            <li class="nav-item"><a href="./pages/clients.html">Clients</a></li>
+            <li class="nav-item"><a href="./pages/gallery.html">Gallery</a></li>
+            <li class="nav-item"><a href="./pages/price.html">Pricing</a></li>
+            <li class="nav-item">
+              <a href="./pages/service.html">Services</a>
+              <div class="sub-nav">
+                <ul>
+                  <li class="sub-nav-item"><a href="#">Web Designing</a></li>
+                  <li class="sub-nav-item"><a href="#">Frontend</a></li>
+                  <li class="more-item sub-nav-item">
+                    Backend<i class="fa fa-angle-right"></i>
+                    <div class="sub-sub-nav">
+                      <ul>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Dart</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="more-item sub-nav-item">
+                    Data Science<i class="fa fa-angle-right"></i>
+                    <div class="sub-sub-nav">
+                      <ul>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">R language</a></li>
+                        <li><a href="#">Artificial Intelligence</a></li>
+                        <li><a href="#">Postgre</a></li>
+                        <li><a href="#">Git hub</a></li>
+                        <li><a href="">SQL</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="./pages/training.html">Training</a>
+            </li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <nav class="nav-bar nav-2">
+          <ul class="nav-links">
+            <li class="active nav-2-item">
+              <a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+            </li>
+            <li class="nav-2-item">
+              <a href="./pages/info.html"
+                ><i class="fa fa-user" aria-hidden="true"></i>About Us</a
+              >
+            </li>
+            <li class="nav-2-item">
+              <a href="./pages/clients.html"
+                ><i class="fa fa-users" aria-hidden="true"></i>Clients</a
+              >
+            </li>
+            <li class="nav-2-item">
+              <a href="./pages/gallery.html"
+                ><i class="fa fa-inr" aria-hidden="true"></i>Gallery</a
+              >
+            </li>
+            <li class="nav-2-item">
+              <a href="./pages/price.html"
+                ><i class="fa fa-home" aria-hidden="true"></i>Pricing</a
+              >
+            </li>
+            <li class="nav-2-item">
+              <a href="./pages/training.html"
+                ><i class="fa fa-edit" aria-hidden="true"></i>Training</a
+              >
+            </li>
+            <li class="nav-2-item">
+              <a href="./pages/service.html"
+                ><i class="fa fa-clone" aria-hidden="true"></i>Services</a
+              >
+            </li>
+            <li class="nav-2-item">
+              <a href="contact.html"
+                ><i class="fa fa-phone" aria-hidden="true"></i>Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main-container">
+        <div class="login-box">
+          <h1 id="login">Login</h1>
+          <h1 id="register">Register</h1>
+          <form class="login" method="POST" action="/api/user/login">
+            <div class="text-box">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <input
+                type="text"
+                placeholder="Email or Phone number"
+                name="username"
+                required
+              />
+            </div>
+            <div class="text-box">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+              <input
+                type="password"
+                placeholder="password"
+                name="password"
+                required
+              />
+            </div>
+            <div>
+              <input type="checkbox" name="terms" id="terms" required />
+              <label for="terms" class="terms">Terms of service</label>
+            </div>
+            <input type="submit" class="btn" value="Sign in" id="btn-login" />
+            <div>
+              <p class="forget"><a href="">Forgot Password ?</a></p>
+              <p class="existing-user">
+                Already have an account ?<a href="/api/user/signin">Login</a>
+                here
+              </p>
+            </div>
+          </form>
+
+          <form class="register" method="POST" action="/api/user/register">
+            <div class="text-box">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <input
+                type="text"
+                id="fname"
+                placeholder="First Name"
+                required
+                name="first_name"
+              />
+            </div>
+            <div class="text-box">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <input
+                type="text"
+                id="lname"
+                placeholder="Last Name"
+                required
+                name="last_name"
+              />
+            </div>
+            <div class="text-box">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                required
+                name="username"
+              />
+            </div>
+            <div class="text-box">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                name="email"
+                required
+              />
+            </div>
+            <div>
+              <input type="file" , name="imgUrl" />
+            </div>
+            <div class="text-box">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <input
+                type="text"
+                id="phoneNo"
+                placeholder="Phone Number"
+                name="phone_number"
+                required
+              />
+            </div>
+            <div class="text-box">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+              <input
+                type="password"
+                id="password"
+                placeholder="password"
+                required
+                name="password"
+              />
+            </div>
+            <small class="info-msg"
+              >Password must be atleast 8 characters long</small
+            >
+
+            <div class="text-box">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="confirm password"
+                required
+              />
+            </div>
+            <small id="error-message">Password do not match</small>
+            <input
+              type="submit"
+              disabled
+              class="btn"
+              value="Register"
+              id="btn-register"
+            />
+            <div class="forget">Already Registered? <a href="/">Login</a></div>
+          </form>
+        </div>
+      </main>
+
+      <footer></footer>
+    </div>
+    <script type="text/javascript" src="./js/pageScript.js"></script>
+  </body>
+</html>
